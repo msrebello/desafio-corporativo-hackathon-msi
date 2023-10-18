@@ -1,9 +1,7 @@
-package com.msi.comporativo.desafiohackathon.empresas.application;
+package com.msi.comporativo.desafiohackathon.funcionarios.application;
 
-import com.msi.comporativo.desafiohackathon.empresas.domain.Empresa;
-import com.msi.comporativo.desafiohackathon.empresas.domain.Funcionario;
-import com.msi.comporativo.desafiohackathon.empresas.infrastructure.EmpresaRepository;
-import com.msi.comporativo.desafiohackathon.empresas.infrastructure.FuncionarioRepository;
+import com.msi.comporativo.desafiohackathon.funcionarios.domain.Funcionario;
+import com.msi.comporativo.desafiohackathon.funcionarios.infrastructure.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,4 +20,6 @@ public class FuncionarioController {
     public List<Funcionario> getAll(){
         return funcionarioRepository.findAll();
     }
+
+
 }

@@ -1,8 +1,9 @@
 package com.msi.comporativo.desafiohackathon.empresas.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -11,11 +12,13 @@ import java.util.UUID;
 public class Empresa {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="idEmpresa")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="idempresa")
     private Integer id;  // Usando Long para permitir autoincremento.
 
     private String nome;
+
+
 
     // Getters e Setters, construtores, outros métodos, etc.
 

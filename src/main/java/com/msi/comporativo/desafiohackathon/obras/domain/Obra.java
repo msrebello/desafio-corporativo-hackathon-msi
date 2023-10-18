@@ -1,19 +1,23 @@
-package com.msi.comporativo.desafiohackathon.empresas.domain;
+package com.msi.comporativo.desafiohackathon.obras.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 @Entity
 @Data
-@Table(name="Presenca")
-public class ListaPresenca {
+@Table(name="Obra")
+public class Obra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="idPresenca")
+    @Column(name="idObra")
     private Integer id;  // Usando Long para permitir autoincremento.
 
-    private String nome;
+    @Column(name="descricao")
+    private String descricao;
+
 
     // Getters e Setters, construtores, outros métodos, etc.
 

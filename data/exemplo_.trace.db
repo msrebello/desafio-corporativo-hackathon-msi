@@ -1,3 +1,0 @@
-2023-10-18 11:32:46 jdbc[13]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]column id_empresa"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
-drop column id_empresa [42001-214]

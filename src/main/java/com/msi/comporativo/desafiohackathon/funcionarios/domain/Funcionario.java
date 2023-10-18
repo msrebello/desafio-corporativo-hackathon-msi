@@ -1,6 +1,8 @@
-package com.msi.comporativo.desafiohackathon.empresas.domain;
+package com.msi.comporativo.desafiohackathon.funcionarios.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+
+import com.msi.comporativo.desafiohackathon.empresas.domain.Empresa;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -18,6 +20,10 @@ public class Funcionario {
     private String nome;
     @Column(name="dataAdmissao")
     private LocalDateTime dataAdmissao;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idEmpresa", referencedColumnName = "idEmpresa", foreignKey = @ForeignKey(name = "fk_empresa_id", value = ConstraintMode.CONSTRAINT))
+    private Empresa empresa;
 
     // Getters e Setters, construtores, outros métodos, etc.
 
