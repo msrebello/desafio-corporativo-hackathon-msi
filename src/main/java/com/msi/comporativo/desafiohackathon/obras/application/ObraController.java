@@ -17,7 +17,7 @@ public class ObraController {
     ObraRepository obraRepository;
 
     @GetMapping
-    public List<Obra> getAll(){
+    public List<Obra> getAll() {
         return obraRepository.findAll();
     }
 }

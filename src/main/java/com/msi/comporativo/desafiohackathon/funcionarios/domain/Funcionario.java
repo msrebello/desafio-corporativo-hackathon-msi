@@ -1,33 +1,35 @@
 package com.msi.comporativo.desafiohackathon.funcionarios.domain;
 
-import javax.persistence.*;
-
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.msi.comporativo.desafiohackathon.empresas.domain.Empresa;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name="Funcionario")
-public class Funcionario {
+@Table(name = "funcionario")
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Funcionario implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
-    @Column(name="idFuncionario")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "increment")
+    @Column(name = "id_funcionario")
     private Integer id;  // Usando Long para permitir autoincremento.
-    @Column(name="nomeFuncionario")
+    @Column(name = "nome_funcionario")
     private String nome;
-    @Column(name="dataAdmissao")
+    @Column(name = "data_admissao")
     private LocalDateTime dataAdmissao;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "idEmpresa", referencedColumnName = "idEmpresa", foreignKey = @ForeignKey(name = "fk_empresa_id", value = ConstraintMode.CONSTRAINT))
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_empresa", referencedColumnName = "id_empresa", foreignKey = @ForeignKey(name = "fk_empresa_id", value = ConstraintMode.CONSTRAINT))
     private Empresa empresa;
-
-    // Getters e Setters, construtores, outros métodos, etc.
-
-    // Construtores, outros métodos, getters e setters, etc.
-
-
 }

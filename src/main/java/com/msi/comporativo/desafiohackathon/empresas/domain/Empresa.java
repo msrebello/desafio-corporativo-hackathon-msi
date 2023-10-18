@@ -1,28 +1,20 @@
 package com.msi.comporativo.desafiohackathon.empresas.domain;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
-import java.util.List;
-import java.util.UUID;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Data
-@Table(name="Empresa")
-public class Empresa {
+@Table(name = "empresa")
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class Empresa implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="idempresa")
-    private Integer id;  // Usando Long para permitir autoincremento.
-
+    @Column(name = "id_empresa")
+    private Integer id;
     private String nome;
-
-
-
-    // Getters e Setters, construtores, outros métodos, etc.
-
-    // Construtores, outros métodos, getters e setters, etc.
-
-
 }
