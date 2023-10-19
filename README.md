@@ -54,7 +54,6 @@ O arquivo **application.properties** contém as configurações do aplicativo, i
   - **GET /api/v1/empresa/{id}:** Retorna os detalhes de uma empresa específica com o ID fornecido.
   - **GET /api/v1/funcionario:** Retorna a lista de todos os funcionários.
   - **GET /api/v1/obra:** Retorna a lista de todas as obras.
-  - **GET /api/v1/obra/{id}:** Retorna os detalhes de uma obra específica com o ID fornecido.
   - **GET /api/v1/presencas:** Retorna a lista de todas as presenças registradas.
   - **GET /api/v1/presencas/obra/{obraId}/{dataPresenca}:** Retorna a lista de funcionários presentes em uma obra específica em uma data específica.
 
@@ -64,7 +63,6 @@ O arquivo **application.properties** contém as configurações do aplicativo, i
 
   - **POST /api/v1/empresa:** Cria uma nova empresa.
   - **POST /api/v1/funcionario:** Cria um novo funcionário.
-  - **POST /api/v1/obra:** Cria uma nova obra.
   - **POST /api/v1/presencas:** Registra a presença de um funcionário em uma obra em uma data específica.
 
 ## Contato
