@@ -53,7 +53,6 @@ O arquivo **application.properties** contém as configurações do aplicativo, i
   - **GET /api/v1/empresa:**  Retorna a lista de todas as empresas cadastradas.
   - **GET /api/v1/empresa/{id}:** Retorna os detalhes de uma empresa específica com o ID fornecido.
   - **GET /api/v1/funcionario:** Retorna a lista de todos os funcionários.
-  - **GET /api/v1/funcionario/{id}:** Retorna os detalhes de um funcionário específico com o ID fornecido.
   - **GET /api/v1/obra:** Retorna a lista de todas as obras.
   - **GET /api/v1/obra/{id}:** Retorna os detalhes de uma obra específica com o ID fornecido.
   - **GET /api/v1/presencas:** Retorna a lista de todas as presenças registradas.
